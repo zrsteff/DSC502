@@ -1,0 +1,24 @@
+---
+title: "ICA11 - Steffens"
+author: "Zach Steffens"
+date: "2026-03-20"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(tidyr)
+library(dplyr)
+```
+```{r}
+flights = read.csv("C:\\Users\\zrsm9\\OneDrive\\Documents\\DSC502\\flights.csv")
+```
+
+```{r}
+p1 = ggplot(data=flights) + geom_line(aes(x=year, y=passengers, color= month)) + 
+  xlab('Year') + ylab('Passengers') + ggtitle('Flight Data') + theme_bw()
+
+p1
+```
+
